@@ -1,48 +1,22 @@
-# glyph-pointsource
-A Glyph script for inserting a 2D or 3D point source into a grid.
+# glyph-extrudeProfile
+A Glyph script that extrudes a profile curve along a spine curve with optional scale law curve and twist.
 
 ![Point Source Example Image][1]
-
-[1]: https://raw.github.com/dbgarlisch/glyph-pointsource/master/ScriptImage.png  "Point Source Example Image"
+[1]: https://raw.github.com/dbgarlisch/glyph-extrudeProfile/master/images/twistedEllipseSurf_lawCurve.png  "Extruded Profile Example Image"
 
 
 ## Generating Geometry
-This script inserts a point source into an existing grid block or domain.
-
-The script detects the grid's CAE dimensionality and prompts for input
-accordingly.
-
-In 2D, the point source is built as a collection of unclosed, concentric,
-circular connectors centered around a user-defined location. An additional,
-two-point connector is created to capture the center point. These connectors are
-inserted into a user-selected domain as interior edges.
-
-In 3D, the point source is built as a collection of unclosed, concentric,
-spherical domains centered around a user-defined location. An additional,
-half-disk domain is created to capture the unused seam points. These domains are
-inserted into a user-selected block as interior baffles.
-
-For both 2D and 3D, the point source layer spacing is controlled using a
-connector's distribution. One point source layer will be create for each
-connector point *except* for the first. The connector must exist before running
-the script.
+Blah blah blah.
 
 ### Limitations
-* The script does *not* check if a point source pierces a boundary of the targeted block or domain.
-* 2D point sources are built in an XY plane.
+* Blah blah blah.
+* Blah blah blah.
 
 ## Running The Script
 
-* Build or open the grid into which you want to insert a point source.
-* Execute this script.
-* Select the Block/Domain target into which you want to insert the point source.
-  However, if the grid only contains a single target, it will be used
-  automatically.
-* Select point source location. You can select any existing grid point (it is
-  often simpler to select the starting point of the connector selected in the
-  next step).
-* Select the connector to use for the point source layer spacing.
-* Wait for the script to finish.
+* Blah blah blah.
+* Blah blah blah.
+* Blah blah blah.
 
 
 ## Sourcing This Script
