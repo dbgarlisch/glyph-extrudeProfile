@@ -1,9 +1,8 @@
 # glyph-extrudeProfile
-A Glyph script that extrudes a profile curve along a spine curve with optional scale law curve and twist.
+An analytic function script for [CreateFromAnalyticFunction.glf][2] that extrudes a profile
+curve along a spine curve with optional scale law curve and twist.
 
 ![Point Source Example Image][1]
-[1]: https://raw.github.com/dbgarlisch/glyph-extrudeProfile/master/images/twistedEllipseSurf_lawCurve.png  "Extruded Profile Example Image"
-
 
 ## Generating Geometry
 Blah blah blah.
@@ -126,3 +125,6 @@ INFORMATION, OR ANY OTHER PECUNIARY LOSS) ARISING OUT OF THE USE OF OR
 INABILITY TO USE THESE SCRIPTS EVEN IF POINTWISE HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF THE FAULT OR NEGLIGENCE OF
 POINTWISE.
+
+[1]: https://raw.github.com/dbgarlisch/glyph-extrudeProfile/master/images/twistedEllipseSurf_lawCurve.png  "Extruded Profile Example Image"
+[2]: https://github.com/pointwise/CreateFromAnalyticFunction "CreateFromAnalyticFunction.glf"
