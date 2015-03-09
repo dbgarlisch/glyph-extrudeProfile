@@ -36,3 +36,19 @@ proc computeSurfacePoint { u v uvMin uvMax } {
 
   return "$x $y $z"
 }
+
+proc beginSurface { uStart vStart uEnd vEnd uNumPoints vNumPoints } {
+  puts [info level 0]
+}
+
+proc beginSurfaceV { v } {
+  puts [info level 0]
+}
+
+proc endSurfaceV { v } {
+  puts [info level 0]
+}
+
+proc endSurface { } {
+  puts [info level 0]
+}
