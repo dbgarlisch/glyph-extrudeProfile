@@ -1,112 +1,22 @@
 # glyph-extrudeProfile
+
+## twistedEllipseSurf.glf
+
+An analytic function script for [CreateFromAnalyticFunction.glf][2] that extrudes an analytic
+curve along the z axis with twist and an optional scale. The scale is controlled by a law curve.
+
+![twistedEllipseSurf Example Image][1]
+
+## extrudeRail.glf
+
 An analytic function script for [CreateFromAnalyticFunction.glf][2] that extrudes a profile
-curve along a spine curve with optional scale law curve and twist.
+curve along a spine curve.
 
-![Point Source Example Image][1]
+![extrudeRail Example Image][3]
 
-## Generating Geometry
-Blah blah blah.
+## Limitations
 
-### Limitations
-* Blah blah blah.
-* Blah blah blah.
-
-## Running The Script
-
-* Blah blah blah.
-* Blah blah blah.
-* Blah blah blah.
-
-
-## Sourcing This Script
-
-It is possible to source this script in your own Glyph scripts and use it as a library.
-
-To source this script add the following lines to your script:
-
-    set disableAutoRun_PtSrc 1 ;# disable the autorun
-    source "/some/path/to/your/copy/of/pointsource.glf"]
-
-See the scripts `test/test2D.glf` and `test/test3D.glf` for examples.
-
-
-### pw::PtSrc Library Docs
-
-#### proc pw::PtSrc::buildLayerData { ds growthRate numLayers }
-Build a point source layer data list using an initial spacing, growth
-    rate and number of layers.
-
-    ds         - Initial layer spacing (float).
-    growthRate - Layer spacing growth rate (float).
-    numLayers  - Number of concentric layers (integer).
-
-#### proc pw::PtSrc::buildLayerDataFromCon { con }
-Build a point source layer data list using a connector.
-
-    con - A pointwise connector object.
-
-#### proc pw::PtSrc::doBuildPointSource2 { dom centerPt layerData }
-Build a 2D point source using a layer data list.
-
-    dom       - A pointwise domain object.
-    centerPt  - The center point {x y z}.
-    layerData - The layer spacing list {{r0 ds0} ... {rN dsN}}.
-
-#### proc pw::PtSrc::buildPointSource2 { dom centerPt con }
-Build a 2D point source using a connector.
-
-    dom      - A pointwise domain object.
-    centerPt - The center point {x y z}.
-    con      - A pointwise connector object.
-
-#### proc pw::PtSrc::doBuildPointSource3 { blk centerPt layerData }
-Build a 3D point source using a layer data list.
-
-    blk       - A pointwise block object.
-    centerPt  - The center point {x y z}.
-    layerData - The layer spacing list {{r0 ds0} ... {rN dsN}}.
-
-#### proc pw::PtSrc::buildPointSource3 { blk centerPt con }
-Build a 3D point source using a connector.
-
-    blk       - A pointwise block object.
-    centerPt  - The center point {x y z}.
-    con      - A pointwise connector object.
-
-
-### pw::PtSrc Library Usage Examples
-
-#### Creating a 2D Point Source Using a Connector
-    set dom [pw::Grid getByName "dom-1"]
-    set pt {13.546179 12.470546  7.7679454}
-    set con [pw::Grid getByName "con-1"]
-    pw::PtSrc::buildPointSource2 $dom $pt $con
-
-#### Creating a 2D Point Source Using Initial Spacing, Growth Rate and Number of Layers
-    set ds         0.1
-    set growthRate 1.3
-    set numLayers  5
-    set layerData [pw::PtSrc::buildLayerData $ds $growthRate $numLayers]
-
-    set dom [pw::Grid getByName "dom-1"]
-    set pt {5.7 5.5 14.4}
-    pw::PtSrc::doBuildPointSource2 $dom $pt $layerData
-
-#### Creating a 3D Point Source Using a Connector
-    set blk [pw::Grid getByName "blk-1"]
-    set pt {13.546179 12.470546  7.7679454}
-    set con [pw::Grid getByName "con-1"]
-    pw::PtSrc::buildPointSource3 $blk $pt $con
-
-#### Creating a 3D Point Source Using Initial Spacing, Growth Rate and Number of Layers
-    set ds         0.1
-    set growthRate 1.3
-    set numLayers  5
-    set layerData [pw::PtSrc::buildLayerData $ds $growthRate $numLayers]
-
-    set blk [pw::Grid getByName "blk-1"]
-    set pt {5.7 5.5 14.4}
-    pw::PtSrc::doBuildPointSource3 $blk $pt $layerData
+You must hand edit the files to change the behavior.
 
 
 ## Disclaimer
@@ -126,5 +36,6 @@ INABILITY TO USE THESE SCRIPTS EVEN IF POINTWISE HAS BEEN ADVISED OF THE
 POSSIBILITY OF SUCH DAMAGES AND REGARDLESS OF THE FAULT OR NEGLIGENCE OF
 POINTWISE.
 
-[1]: https://raw.github.com/dbgarlisch/glyph-extrudeProfile/master/images/twistedEllipseSurf_lawCurve.png  "Extruded Profile Example Image"
+[1]: https://raw.github.com/dbgarlisch/glyph-extrudeProfile/master/images/twistedEllipseSurf_lawCurve.png  "twistedEllipseSurf Example Image"
 [2]: https://github.com/pointwise/CreateFromAnalyticFunction "CreateFromAnalyticFunction.glf"
+[3]: https://raw.github.com/dbgarlisch/glyph-extrudeProfile/master/images/extrudeProfileAlongRail.png  "extrudeRail Example Image"
